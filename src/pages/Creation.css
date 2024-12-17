@@ -1,0 +1,143 @@
+.creationPage {
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 150px;
+  min-height: 100%;
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+}
+
+.flagList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 15px;
+}
+.flagSvg {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 2px;
+  left: 10px;
+}
+
+.box {
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.box:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
+
+  filter: grayscale(100%);
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.creationForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.creationInput {
+  border: none;
+  outline: 0;
+  color: #49b5bc;
+  font-size: 50px;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.creationInput::placeholder {
+  color: #49b5bc;
+  font-size: 50px;
+  font-weight: 600;
+}
+.textareaButton {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.creationTextarea {
+  border: none;
+  outline: 0;
+  color: #444444;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 2%;
+  width: 96%;
+}
+
+.creationTextarea::placeholder {
+  color: #444444;
+  font-family: "Poppins", sans-serif;
+}
+.creationSubmit {
+  margin-top: -75px;
+  width: 110px;
+  height: 50px;
+  background-color: #49b5bc;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border: #49b5bc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creationSubmit:hover {
+  color: #49b5bc;
+  background-color: white;
+  border-color: #49b5bc;
+}
+
+.textareaWrite {
+  color: #49b5bc;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.creationTitle {
+  color: #49b5bc;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.creationTitleh2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.hr {
+  width: 10%;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #49b5bc;
+  border: none;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}

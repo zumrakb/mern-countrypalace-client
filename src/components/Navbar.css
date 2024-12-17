@@ -1,0 +1,112 @@
+.navbar {
+    background-color: transparent;
+   width: 100%;
+   height: 70px;
+   position: absolute;
+   top: 0;
+}
+.navbar .nav-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; 
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+.navbar .container {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: 39% 64%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.navbar .left {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    gap: 20px;
+    
+}
+.navbar .left span {
+    font-family: Inria Sans;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -2px;
+    mix-blend-mode: color-dodge;
+}
+.navbar .left img {
+    width: 50px;
+    z-index: 1;
+}
+
+.navbar .right {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar .right img {
+    width: 50px;
+    border-radius:50% ;
+    z-index: 3;
+}
+.nav-container .right span {
+    font-family: Inria Sans;
+    font-style: normal;
+    /* font-weight: 700; */
+    line-height: normal;
+    mix-blend-mode: color-dodge;
+    font-size: 20px;
+    color: #FFFFFF;
+    z-index: 2;
+}
+.navbar .right {
+    cursor: pointer;
+    position: relative;
+
+}
+.navbar .right .logout-container{
+    right: -16px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.53);
+    height: 122px;
+    top: -25px;
+    -webkit-backdrop-filter: filter(13px);
+    backdrop-filter: filter(13px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+    backdrop-filter: blur(32px);
+}
+
+.navbar .right .logout-container .p {
+    
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 200ms;
+    padding: 5px;
+    z-index: 3;
+}
+

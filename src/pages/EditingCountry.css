@@ -1,0 +1,43 @@
+
+.editingTextarea {
+  width: 80%;
+
+  resize: none;
+  color: #444444;
+  padding: 15px;
+  outline: none;
+  border-radius: 10px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  /* background: rgb(235, 235, 235); */
+}
+
+.editingPage .main-content {
+  display: flex;
+  justify-content: space-between;
+}
+.editingPage .right-content {
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+}
+.editingSubmit {
+  width: 110px;
+  height: 50px;
+  background-color: #49b5bc;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 1px solid #49b5bc;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.editingSubmit:hover {
+  color: #49b5bc;
+  background-color: white;
+  border-color: #49b5bc;
+}

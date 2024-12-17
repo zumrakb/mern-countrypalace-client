@@ -1,0 +1,94 @@
+.selectedCountryPage,
+.editingPage {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px auto;
+  margin-top: 0;
+  gap: 10px;
+  /* margin-top:200px ; */
+  overflow-y: auto;
+}
+.banner {
+  position: relative;
+}
+
+.createdBy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #49b5bc;
+}
+
+.left hr {
+  border-bottom: 3px solid #49b5bc;
+  width: 100px;
+}
+.banner .left .selectedCountryFlag {
+  width: 20px;
+  height: 20px;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+.banner .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+}
+.banner .createdBy .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.banner .banner-image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.main-content {
+  display: flex;
+}
+
+.selectedCountryDescription {
+  width: 100%;
+  color: #444444;
+  height: 400px;
+  padding: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.iconBackground {
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,71 @@
+/*here is cardComponent styles*/
+
+.cardFlag {
+  width: 20px;
+  height: 20px;
+}
+
+.cardTitle {
+  color: white;
+  font-size: 15px;
+}
+
+.cardComponent {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 1px 5px #cdc3c3;
+  transition: 300ms;
+  background-color: white;
+  padding: 20px;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+}
+.cardComponent {
+  overflow: hidden;
+}
+.cardComponent .background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:0;
+  border-radius: 8px;
+    transition: 300ms;
+}
+
+.cardComponent .background-image:hover {
+  filter: grayscale(50%);
+   transform: scale(1.1);
+   overflow: hidden;
+}
+
+
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  font-weight: 900;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.cardBottom img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}

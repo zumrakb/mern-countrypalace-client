@@ -1,0 +1,41 @@
+.homePage {
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 150px;
+    position: relative;
+    min-height: 85vh;
+
+}
+
+.homePage .homePageButton {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    border: 0;
+    background: #49B5BC;
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+}
+.homePage .homePageButton > span {
+    display: none;
+    font-size: 20px;
+}
+
+.homePage .homePageButton:hover {
+    width: 200px;
+    border-radius: 50px;
+}
+
+.homePage .homePageButton:hover span {
+    display: block;
+}
