@@ -14,6 +14,8 @@ const SelectedCountry = () => {
   const [userId, setUserId] = useState(null); // State to store logged-in user's ID
   const isLogin = localStorage.getItem("token");
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   // Decode JWT to get the logged-in user's ID
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -32,7 +34,7 @@ const SelectedCountry = () => {
   async function goHome() {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
+      await axios.delete(`${apiUrl}/api/blogs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       Navigate("/"); // Redirect to the home page after deletion
@@ -47,12 +49,9 @@ const SelectedCountry = () => {
       async function fetchCountry() {
         try {
           const token = localStorage.getItem("token");
-          const resp = await axios.get(
-            `http://localhost:5000/api/blogs/${id}`,
-            {
-              headers: { Authorization: `Bearer ${token}` },
-            }
-          );
+          const resp = await axios.get(`${apiUrl}/api/blogs/${id}`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
           setData(resp.data);
           setLoading(false);
         } catch (error) {

@@ -7,6 +7,7 @@ import "./Home.css";
 const Home = () => {
   const Navigate = useNavigate();
   const [data, setData] = useState([]);
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -18,7 +19,7 @@ const Home = () => {
     async function fetchCountries() {
       const authString = `Bearer ${token}`;
       try {
-        const resp = await axios.get("http://localhost:5000/api/blogs", {
+        const resp = await axios.get(`${apiUrl}/api/blogs`, {
           headers: { Authorization: authString },
         });
         setData(resp.data);

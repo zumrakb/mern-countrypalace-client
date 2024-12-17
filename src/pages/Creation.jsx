@@ -10,6 +10,7 @@ const Creation = () => {
   const [description, setDescription] = useState("");
   const [imageLink, setimageLink] = useState("");
   const isLogin = localStorage.getItem("token");
+  const apiUrl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     if (!isLogin) Navigate("/login");
   }, [isLogin, Navigate]);
@@ -36,7 +37,7 @@ const Creation = () => {
 
       const token = localStorage.getItem("token");
 
-      await axios.post("http://localhost:5000/api/blogs", body, {
+      await axios.post(`${apiUrl}/api/blogs`, body, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

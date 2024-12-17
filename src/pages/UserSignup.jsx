@@ -11,6 +11,7 @@ const SignupPage = () => {
   const [isValidEmail, setIsValidEmail] = useState(false);
 
   const Navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -39,7 +40,7 @@ const SignupPage = () => {
         return;
       }
 
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post(`${apiUrl}/api/auth/register`, {
         email: username,
         password: password,
         name: name,

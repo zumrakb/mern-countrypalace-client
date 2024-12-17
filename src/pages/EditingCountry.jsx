@@ -12,6 +12,7 @@ const EditingCountry = () => {
   const [imageLink, setImageLink] = useState("");
   const isLogin = localStorage.getItem("token");
   const [loading, setLoading] = useState(true);
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   // Submit edited country information
   async function editingSubmit() {
@@ -25,13 +26,9 @@ const EditingCountry = () => {
         return;
       }
 
-      const response = await axios.put(
-        `http://localhost:5000/api/blogs/${id}`,
-        newBody,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await axios.put(`${apiUrl}/api/blogs/${id}`, newBody, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       console.log("Blog updated successfully:", response.data);
       Navigate(`/blog/${id}`);
@@ -54,7 +51,7 @@ const EditingCountry = () => {
     if (isLogin) {
       async function fetchCountry() {
         const token = localStorage.getItem("token");
-        const resp = await axios.get(`http://localhost:5000/api/blogs/${id}`, {
+        const resp = await axios.get(`${apiUrl}/api/blogs/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const countryInfo = resp.data;

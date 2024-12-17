@@ -9,6 +9,7 @@ const LoginPage = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(false);
   const Navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const checkEmailInDatabase = async (email) => {
     try {
@@ -16,10 +17,9 @@ const LoginPage = ({ setUser }) => {
         setIsValidEmail(false);
         return;
       }
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/check-email",
-        { email }
-      );
+      const response = await axios.post(`${apiUrl}/api/auth/check-email`, {
+        email,
+      });
       setIsValidEmail(response.data.exists);
     } catch (error) {
       console.error("Error checking email:", error.message);
@@ -39,13 +39,10 @@ const LoginPage = ({ setUser }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        {
-          email: username,
-          password: password,
-        }
-      );
+      const response = await axios.post(`${apiUrl}/api/auth/login`, {
+        email: username,
+        password: password,
+      });
 
       const token = response.data.token;
       localStorage.setItem("token", token);
